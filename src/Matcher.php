@@ -20,7 +20,7 @@ final class Matcher
         $this->orderPairs = [];
     }
 
-    public function match(): void
+    public function priceTimeMatch(): void
     {
         foreach ($this->buyOrderCollection->getOrders() as $buyOrderKey => $buyOrder) {
             $sellOrdersForName = $this->sellOrderCollection->getByName($buyOrder->getName());
