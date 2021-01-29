@@ -16,11 +16,11 @@ abstract class OrderCollection
 
     public function addOrder(Order $order): void
     {
-        $this->collection[] = $order;
+        $this->collection[$order->getId()] = $order;
     }
 
-    public function removeByKey(int $key): void
+    public function removeOrder(Order $order): void
     {
-        unset($this->collection[$key]);
+        unset($this->collection[$order->getId()]);
     }
 }
